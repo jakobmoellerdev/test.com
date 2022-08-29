@@ -1,0 +1,24 @@
+# permissions for end users to edit testkinds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: testkind-editor-role
+rules:
+- apiGroups:
+  - group.my.domain
+  resources:
+  - testkinds
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - group.my.domain
+  resources:
+  - testkinds/status
+  verbs:
+  - get

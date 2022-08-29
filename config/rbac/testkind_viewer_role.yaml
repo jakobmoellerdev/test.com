@@ -1,0 +1,20 @@
+# permissions for end users to view testkinds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: testkind-viewer-role
+rules:
+- apiGroups:
+  - group.my.domain
+  resources:
+  - testkinds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - group.my.domain
+  resources:
+  - testkinds/status
+  verbs:
+  - get

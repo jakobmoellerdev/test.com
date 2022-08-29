@@ -1,0 +1,7 @@
+go 1.18
+
+use ./api/v1alpha1
+
+//+kubebuilder:scaffold:apis
+
+use .

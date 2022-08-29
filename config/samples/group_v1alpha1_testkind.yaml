@@ -1,0 +1,6 @@
+apiVersion: group.my.domain/v1alpha1
+kind: TestKind
+metadata:
+  name: testkind-sample
+spec:
+  # TODO(user): Add fields here
